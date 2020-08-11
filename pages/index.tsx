@@ -1,11 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const IndexPage: React.FC<{}> = (): JSX.Element => {
-  return (
-    <div>
-      <h1>Rushil Basappa!</h1>
-    </div>
-  );
-};
+const Title = styled.h1`
+  font-size: 50px;
+  color: ${({ theme }) => theme.colors.primary};
+`;
 
-export default IndexPage;
+export default (): React.ReactElement => (
+  <div>
+    <Title>Rushil Basappa!!</Title>
+  </div>
+);
