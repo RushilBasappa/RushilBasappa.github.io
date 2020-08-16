@@ -1,13 +1,27 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+import { primaryTextColor, backgroundColor } from '../src/theme';
 
 const Title = styled.h1`
+  margin-top: 0;
   font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${primaryTextColor};
 `;
 
-export default (): React.ReactElement => (
-  <div>
-    <Title>Rushil Basappa!!</Title>
-  </div>
+const Wrapper = styled.div`
+  height: 100%;
+  background-color: ${backgroundColor};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Index = (): React.ReactElement => (
+  <ThemeProvider theme={{ mode: 'dark' }}>
+    <Wrapper>
+      <Title>Rushil Basappa 😎</Title>
+    </Wrapper>
+  </ThemeProvider>
 );
+
+export default Index;
