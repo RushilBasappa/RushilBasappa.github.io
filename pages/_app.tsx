@@ -1,6 +1,7 @@
 import App from 'next/app';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import Head from 'next/head';
+import "./styles.css"
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -27,7 +28,10 @@ class MyApp extends App {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Head>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta charSet="utf-8" />
           <title>Rushil Basappa</title>
+
         </Head>
         <Component {...pageProps} />
       </ThemeProvider>

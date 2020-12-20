@@ -4,8 +4,10 @@ import { primaryTextColor, backgroundColor } from '../src/theme';
 
 const Title = styled.h1`
   margin-top: 0;
-  font-size: 50px;
+  font-size: 350px;
   color: ${primaryTextColor};
+  font-family: SaluteRiches;
+  font-weight: normal;
 `;
 
 const Wrapper = styled.div`
@@ -19,7 +21,7 @@ const Wrapper = styled.div`
 const Index = (): React.ReactElement => (
   <ThemeProvider theme={{ mode: 'dark' }}>
     <Wrapper>
-      <Title>Rushil Basappa 😎</Title>
+      <Title>Rushil Basappa</Title>
     </Wrapper>
   </ThemeProvider>
 );
